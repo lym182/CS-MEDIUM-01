@@ -7,8 +7,6 @@
 2. 用数组对上一位进位或者借位。
 3. 读取'('  ')'和'-'，将其转为正数运算再考虑'-'的添加。
 
-- 运行结果(见文件)
-- 代码（所有功能）
 ## 运行结果
 ![1](https://github.com/user-attachments/assets/a28cbe80-3878-4b21-9c37-8ed99e55d42f)
 ![2](https://github.com/user-attachments/assets/fa8f2e12-392f-48cd-8115-2fb6121281d8)
