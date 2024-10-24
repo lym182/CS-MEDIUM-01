@@ -9,6 +9,13 @@
 
 - 运行结果(见文件)
 - 代码（所有功能）
+## 运行结果
+![1](https://github.com/user-attachments/assets/a28cbe80-3878-4b21-9c37-8ed99e55d42f)
+![2](https://github.com/user-attachments/assets/fa8f2e12-392f-48cd-8115-2fb6121281d8)
+![3](https://github.com/user-attachments/assets/96ddaf38-5f02-417e-9c74-4955b3d7ddfd)
+![4](https://github.com/user-attachments/assets/b3fb0975-9239-4c29-abc6-e3256911e736)
+
+## 代码
 ```
 #include <stdio.h>
 #include <string.h>
