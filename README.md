@@ -58,10 +58,10 @@ void Addition_sub(char num1[], char num2[]) {
     int sum[MAX] = {0};
     int i, j, len, len3, len4;
     int n2[MAX] = {0};
-    int blag = 0;
+    int flag = 0;
     //判断符号
     if(num1[0] == '(' && num2[0] != '('){
-        blag = 1;
+        flag = 1;
     }
     
     int len1 = strlen (num1); // 计算数组num1的长度，即大数的位数 
@@ -108,7 +108,7 @@ void Addition_sub(char num1[], char num2[]) {
     }
     printf("%s - %s = ", num1, num2);
 
-    if(blag == 1){
+    if(flag == 1){
         printf("-");
     }
      
@@ -120,7 +120,7 @@ void Addition_sub(char num1[], char num2[]) {
 }
 void Subtraction_add1(char num1[], char num2[])
 {
-    int i, j, len, blag;
+    int i, j, len, flag;
     int sum[MAX] = {0};
     int temp[MAX] = {0};
     int n2[MAX] = {0};
@@ -151,10 +151,10 @@ void Subtraction_add1(char num1[], char num2[])
     }
      
     // 在进行减法之前要进行一些预处理 
-    blag = 0; // 为0表示结果是正整数，为1表示结果是负整数 
+    flag = 0; // 为0表示结果是正整数，为1表示结果是负整数 
     if(len3 < len4) // 如果被减数位数小于减数
     {
-        blag = 1; // 标记结果为负数
+        flag = 1; // 标记结果为负数
         // 交换两个数，便于计算 
         for (int i = 0; i < len3; i++)
         {
@@ -182,12 +182,12 @@ void Subtraction_add1(char num1[], char num2[])
             }
             if(sum[i] > n2[i])
             {
-                blag = 0; // 标记结果为正数 
+                flag = 0; // 标记结果为正数 
                 break;
             } 
             else
             {
-                blag = 1; // 标记结果为负数 
+                flag = 1; // 标记结果为负数 
                 // 交换两个数，便于计算 
                 for (int i = 0; i < len3; i++){
                 temp[i] = sum[i];
@@ -222,7 +222,7 @@ void Subtraction_add1(char num1[], char num2[])
     }
      
     printf("%s + %s  = ", num1, num2);
-    if(blag==1)
+    if(flag==1)
     {
         printf("-");
     } 
@@ -234,7 +234,7 @@ void Subtraction_add1(char num1[], char num2[])
 }
 void Subtraction_add2(char num1[], char num2[])
 {
-    int i, j, len, blag;
+    int i, j, len, flag;
     int sum[MAX] = {0};
     int temp[MAX] = {0};
     int n2[MAX] = {0};
@@ -265,10 +265,10 @@ void Subtraction_add2(char num1[], char num2[])
     }
      
     // 在进行减法之前要进行一些预处理 
-    blag = 0; // 为0表示结果是正整数，为1表示结果是负整数 
+    flag = 0; // 为0表示结果是正整数，为1表示结果是负整数 
     if(len3 < len4) // 如果被减数位数小于减数
     {
-        blag = 1; // 标记结果为负数
+        flag = 1; // 标记结果为负数
         // 交换两个数，便于计算
         for (int i = 0; i < len3; i++)
         {
@@ -296,12 +296,12 @@ void Subtraction_add2(char num1[], char num2[])
             }
             if(sum[i] > n2[i])
             {
-                blag = 1; // 标记结果为负数  
+                flag = 1; // 标记结果为负数  
                 break;
             } 
             else
             {
-                blag = 0; // 标记结果为正数 
+                flag = 0; // 标记结果为正数 
                 // 交换两个数，便于计算 
                 for (int i = 0; i < len3; i++){
                     temp[i] = sum[i];
@@ -336,7 +336,7 @@ void Subtraction_add2(char num1[], char num2[])
     }
      
     printf("%s + %s  = ", num1, num2);
-    if(blag==1)
+    if(flag == 1)
     {
         printf("-");
     } 
@@ -350,10 +350,10 @@ void Addition(char num1[], char num2[]) {
     int sum[MAX] = {0};
     int i, j, len, len3, len4;
     int n2[MAX] = {0};
-    int blag = 0;
+    int flag = 0;
     //判断符号
     if(num1[0] == '(' && num2[0] == '('){
-        blag = 1;
+        flag = 1;
     }
     if(num1[0] !='(' && num2[0] == '('){
         Subtraction_add1(num1, num2);
@@ -409,7 +409,7 @@ void Addition(char num1[], char num2[]) {
     }
     printf("%s + %s = ", num1, num2);
 
-    if(blag == 1){
+    if(flag == 1){
         printf("-");
     }
      
@@ -421,7 +421,7 @@ void Addition(char num1[], char num2[]) {
 }
 void Subtraction(char num1[], char num2[])
 {
-    int i, j, len, blag;
+    int i, j, len, flag;
     int sum[MAX] = {0};
     int temp[MAX] = {0};
     int n2[MAX] = {0};
@@ -464,10 +464,10 @@ void Subtraction(char num1[], char num2[])
     }
      
     // 在进行减法之前要进行一些预处理 
-    blag = 0; // 为0表示结果是正整数，为1表示结果是负整数 
+    flag = 0; // 为0表示结果是正整数，为1表示结果是负整数 
     if(len3 < len4) // 如果被减数位数小于减数
     {
-        blag = 1; // 标记结果为负数
+        flag = 1; // 标记结果为负数
         // 交换两个数，便于计算
         for (int i = 0; i < len3; i++)
         {
@@ -495,12 +495,12 @@ void Subtraction(char num1[], char num2[])
             }
             if(sum[i] > n2[i])
             {
-                blag = 0; // 标记结果为正数 
+                flag = 0; // 标记结果为正数 
                 break;
             } 
             else
             {
-                blag = 1; // 标记结果为负数
+                flag = 1; // 标记结果为负数
                 // 交换两个数，便于计算 
                 for (int i = 0; i < len3; i++){
                     temp[i] = sum[i];
@@ -535,7 +535,7 @@ void Subtraction(char num1[], char num2[])
     }
      
     printf("%s  - %s  = ", num1, num2);
-    if(blag==1)
+    if(flag == 1)
     {
         printf("-");
     } 
@@ -553,14 +553,14 @@ void Multiplication(char num1[],char num2[])
     int b[MAX+10] = {0};
     int c[MAX*2+10] = {0};
      
-    int blag = 0;
+    int flag = 0;
     if (num1[0] != '(' && num2[0] == '(')
     {
-        blag = 1;
+        flag = 1;
     }
     if (num2[0] != '(' && num1[0] == '(')
     {
-        blag = 1;
+        flag = 1;
     }
      
      
@@ -609,7 +609,7 @@ void Multiplication(char num1[],char num2[])
     len = i+1; // 记录结果的长度 
      
     printf("%s * %s  = ", num1, num2);
-    if(blag == 1){
+    if(flag == 1){
         printf("-");
     }
     for(i = len-1; i>=0; i--) {
@@ -627,12 +627,12 @@ void Division(char num1[], char num2[])
     int num_b[MAX] = {0};      //除数
     int num_c[MAX] = {0};      //商
  
-    int blag = 0;
+    int flag = 0;
     if(num1[0] != '(' && num2[0] == '('){
-        blag = 1;
+        flag = 1;
     }
     if(num2[0] != '(' && num1[0] == '('){
-        blag = 1;
+        flag = 1;
     }
     
     len1 = strlen(num1);       //获得大数的位数
@@ -662,7 +662,7 @@ void Division(char num1[], char num2[])
  
     if( len3 < len4 )          //如果被除数小于除数，直接返回-1，表示结果为0
     {
-        blag = 3;
+        flag = 3;
     }
     dValue = len3 - len4;      //相差位数
     for (i = len3-1; i >= 0; i--)    //让除数和被除数位数相等(前补0)
@@ -691,13 +691,13 @@ void Division(char num1[], char num2[])
         len = i + 1;                 // 倒着验到不为0的数，获取商的位数 
     }                             
     printf("%s / %s = ", num1, num2);
-    if(blag == 3){
+    if(flag == 3){
         printf("0");
         return;
     }
     if( len>=0 )
     {
-        if(blag == 1){
+        if(flag == 1){
             printf("-");
         }
         for(i = len-1; i >= 0; i-- )
